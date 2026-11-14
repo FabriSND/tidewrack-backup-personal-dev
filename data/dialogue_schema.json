@@ -9,6 +9,7 @@
   "exclusive_flag_groups": [["skeptic", "believer"]],
   "entries": {
     "keeper_intro.json": ["logbook", "radio", "door"],
-    "lamp_room.json": ["start"]
+    "lamp_room.json": ["start"],
+    "endings.json": ["explained_away", "edith_vindicated", "light_believed_edith_doubted", "keep_the_light"]
   }
 }
