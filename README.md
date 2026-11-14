@@ -71,6 +71,11 @@ avoids merge pain — a deliberate choice for a one-person studio.
 Conversations are plain JSON graphs in `data/dialogue/`. Each node is either a
 linear line (`"next": "<id>"`, or `null` to end) or a choice node (`"choices"`).
 Any node can set story flags via `"set_flag"`, which `GameState` persists.
+The canonical flag names and graph entry points are in
+`data/dialogue_schema.json`. When writing a graph, register new flags and
+entries there. Belief is a current stance: choosing either logbook response
+sets its flag and clears the other. Old saves with both flags true load with
+neither set because the last choice cannot be recovered.
 
 ```json
 {
@@ -90,10 +95,17 @@ Any node can set story flags via `"set_flag"`, which `GameState` persists.
 ```bash
 # Validate every dialogue graph (targets resolve, has an ending, no orphans)
 python3 tests/validate_dialogue.py
+python3 -m unittest discover -s tests -p 'test_*.py'
 
 # In-engine checks (requires Godot on PATH)
 godot --headless --path . --check-only   # parse all scripts
 ```
+
+The validator rejects malformed graphs, unknown or mistyped flags, partial or
+contradictory exclusive-flag assignments, missing entries or targets,
+unreachable nodes, and reachable nodes with no path to a terminal. It prints
+the flags each graph sets. A cycle with an exit is valid; validate gameplay,
+save/load, and ending outcomes in Godot as well.
 
 > The GDScript in this build was authored without a local Godot install, so it
 > has been checked statically and via the dialogue validator, **not** yet run in
@@ -108,3 +120,4 @@ scope is locked in [`docs/milestones.md`](docs/milestones.md); the build is
 feature-frozen and tagged `v0.2-demo-rc`.
 
 Demo controls add a gamepad (analog stick + A/B) on top of the keyboard bindings.
+

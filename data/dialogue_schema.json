@@ -1,0 +1,14 @@
+{
+  "flags": {
+    "skeptic": "bool",
+    "believer": "bool",
+    "trusted_edith": "bool",
+    "radioed_tom": "bool",
+    "lamp_relit": "bool"
+  },
+  "exclusive_flag_groups": [["skeptic", "believer"]],
+  "entries": {
+    "keeper_intro.json": ["logbook", "radio", "door"],
+    "lamp_room.json": ["start"]
+  }
+}

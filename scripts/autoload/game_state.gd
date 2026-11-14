@@ -69,6 +69,11 @@ func load_game() -> bool:
 	current_scene = data.get("scene", "res://scenes/game.tscn")
 	var loaded_flags: Variant = data.get("flags", {})
 	flags = loaded_flags if typeof(loaded_flags) == TYPE_DICTIONARY else {}
+	# Earlier versions could set both beliefs by rereading the logbook. The
+	# last choice is unknowable, so leave the stance unset rather than guess.
+	if flags.get("skeptic", false) == true and flags.get("believer", false) == true:
+		flags.erase("skeptic")
+		flags.erase("believer")
 	state_changed.emit()
 	return true
 
@@ -76,3 +81,4 @@ func load_game() -> bool:
 func delete_save() -> void:
 	if has_save():
 		DirAccess.remove_absolute(SAVE_PATH)
+
