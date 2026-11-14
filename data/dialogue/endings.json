@@ -1,0 +1,62 @@
+{
+  "explained_away": {
+    "speaker": "",
+    "text": "By morning the fog has thinned enough to show the north rocks. Beyond them, a distant vessel works its way along the coast.",
+    "next": "explained_away_2"
+  },
+  "explained_away_2": {
+    "speaker": "",
+    "text": "A light on the water, a tired eye, a rhythm the mind wanted to finish. You write down the things you can account for and leave a space beside the things you cannot.",
+    "next": "explained_away_3"
+  },
+  "explained_away_3": {
+    "speaker": "",
+    "text": "The lamp is warm beneath your hand. Tonight you will wind its mechanism, trim the wick, and send its beam out over the rocks. For anyone who needs a way home.",
+    "next": null
+  },
+  "edith_vindicated": {
+    "speaker": "",
+    "text": "Three flashes answer from the north rocks. You wait through the dark between them, counting without meaning to.",
+    "next": "edith_vindicated_2"
+  },
+  "edith_vindicated_2": {
+    "speaker": "",
+    "text": "Edith wrote what she saw. Whatever became of her beyond the rocks, she was not alone with the light. You set her log beside the lamp, open to the final page.",
+    "next": "edith_vindicated_3"
+  },
+  "edith_vindicated_3": {
+    "speaker": "",
+    "text": "You give the wheel a careful turn. The beam passes over the water, and for a moment another light holds its place in the fog. You let it answer in its own time.",
+    "next": null
+  },
+  "light_believed_edith_doubted": {
+    "speaker": "",
+    "text": "The light is there again, beyond the north rocks. This time you see it before the beam reaches it.",
+    "next": "light_believed_edith_doubted_2"
+  },
+  "light_believed_edith_doubted_2": {
+    "speaker": "",
+    "text": "Edith saw something real. Whether it called to her, whether she understood it, whether the rest of her account can be trusted: the water offers no answer. You close the log gently.",
+    "next": "light_believed_edith_doubted_3"
+  },
+  "light_believed_edith_doubted_3": {
+    "speaker": "",
+    "text": "You keep the lamp burning and watch the other light until the fog takes it. Tomorrow you will write down only what you saw.",
+    "next": null
+  },
+  "keep_the_light": {
+    "speaker": "",
+    "text": "You leave Edith's last page open. Outside, the fog carries the beam away before you can tell where the water ends.",
+    "next": "keep_the_light_2"
+  },
+  "keep_the_light_2": {
+    "speaker": "",
+    "text": "You cannot make her account fit neatly into the night, and you cannot dismiss it. The mark of her hand is still in the margin, a small dark stroke where the pen paused.",
+    "next": "keep_the_light_3"
+  },
+  "keep_the_light_3": {
+    "speaker": "",
+    "text": "You wind the mechanism and tend the flame. The light turns once, then again. Somewhere beyond the glass, the sea keeps its own time.",
+    "next": null
+  }
+}
